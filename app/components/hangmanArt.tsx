@@ -57,7 +57,7 @@ const legR = (
       height: "10px",
       width: "71px",
       bottom: "53px",
-      right: "-50px",
+      right: "-48px",
       background: "black",
       rotate: "60deg",
     }}
@@ -84,7 +84,7 @@ type HangmanBodyProps = {
 
 }
 
-export function Hangman({ numOfGuess }: HangmanBodyProps) {
+export function HangmanArt({ numOfGuess }: HangmanBodyProps) {
   return (
     // Container
     <div

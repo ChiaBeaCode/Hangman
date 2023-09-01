@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import words from "~/wordList.json";
 import logo from "~/style/logo.png";
 import { TileRack } from "~/components/tileRack";
-import { Hangman } from "~/components/hangman";
+import { HangmanArt } from "~/components/hangmanArt";
 import { HangmanWord } from "~/components/hangmanword";
 import { Win, Lose } from "~/components/winLoseBanner";
 
@@ -64,12 +64,11 @@ export default function App() {
   //   setWord(choseWord);
   // }
 
-  console.log("word ", word, win, lose);
   return (
     <div>
       <div style={{ fontSize: "25px", textAlign: "center", height: "72px" }}>
         <div className="header">
-          <img src={logo} alt="logo"></img>
+        <a href="https://chiabeacode.netlify.app/"><img src={logo} alt="logo"></img></a>
           <div className="title">Hangman</div>
           <div style={{ lineHeight: "60px" }}>
             {win || lose ? (
@@ -89,7 +88,7 @@ export default function App() {
         </div>
       </div>
       <div className="manAndWordArea">
-        <Hangman numOfGuess={incorrectLetters.length} />
+        <HangmanArt numOfGuess={incorrectLetters.length} />
         <HangmanWord guessedLetters={guessedLetters} word={word} />
       </div>
 

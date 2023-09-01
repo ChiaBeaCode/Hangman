@@ -1,0 +1,125 @@
+body{
+  background: linear-gradient(transparent 70%, #1fad55);
+  height: 100vh;
+}
+.header{
+  display: flex;
+  justify-content: space-around;
+}
+.title {
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  letter-spacing: 2px;
+  border-bottom: 5px solid #996515;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.header img {
+  width: 175px;
+  height: 55px;
+  /* margin-right: -180px; */
+}
+.manAndWordArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 60vw;
+  margin: 30px auto 20px;
+}
+
+.win, .lose{
+    font-size: 60px;
+    font-family: monospace;
+    font-weight: bold;
+    width: fit-content;
+    padding: 5px 5px 0px;
+    position: absolute;
+    left: 40vw;
+    bottom: 50vh;
+    rotate: -30deg;
+    z-index: 2;
+}
+.win{
+  background: rgba(0, 255, 0, 0.1);
+    border: 5px solid green;
+    color: green;
+}
+.lose{
+  background: rgba(255, 0, 0, 0.1);
+    border: 5px solid red;
+    color: red;
+}
+
+.wordRack {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: auto auto 0;
+  max-width: max-content;
+  max-height: 45px;
+}
+
+
+.tileRack {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom left, #e1a95f, #cc7722);
+  max-width: 565px;
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 15px;
+}
+
+.playAgain{
+  background: hsl(182, 61%, 50%);
+  color: #272626;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  margin: 10px;
+  padding: 5px 8px;
+  border: 2px solid #272626;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.playAgain:hover{
+  transform: scale(1.08);
+  padding-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+  .header{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .header img{
+    margin: 0 auto;
+  }
+  .manAndWordArea {
+    flex-wrap: wrap;
+    margin: 150px auto 20px;
+  }
+  .win, .lose{
+    left: 30vw;
+    bottom: 60vh;
+    font-size: 45px;
+  }
+
+}
+@media (max-width: 565px) {
+  .manAndWordArea {
+    flex-wrap: wrap;
+  }
+  .win, .lose{
+    font-size: 35px;
+  }
+}
+@media (max-width: 1050px){
+  .manAndWordArea{
+    margin-top: 60px;
+  }
+}

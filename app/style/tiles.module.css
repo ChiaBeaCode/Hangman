@@ -1,0 +1,40 @@
+.tile {
+  background: #f0f0f0;
+  font-size: 25px;
+  width: 45px;
+  height: 45px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 8px;
+  margin: 5px;
+  box-shadow: 2px 5px 0px #996515;
+  cursor: pointer;
+}
+.tile:hover:not(:disabled),
+.tile:focus:not(:disabled) {
+  transform: scale(1.05);
+  background-color: hsl(143, 50%, 30%);
+  color: #f0f0f0;
+}
+
+.tile.active {
+  background-color: hsl(143, 70%, 40%);
+  color: #f0f0f0;
+  cursor: default;
+}
+.tile.inactive {
+  background-color: #f0f0f0;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.tileRack {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom left, #e1a95f, #cc7722);
+  max-width: 500px;
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 15px;
+}

@@ -1,10 +1,10 @@
 type HangmanWordProps = {
-    guessedLetters: string[],
-    word: string
-}
+  guessedLetters: string[];
+  word: string;
+  lose: boolean;
+};
 
-export function HangmanWord({ guessedLetters, word}: HangmanWordProps) {
-
+export function HangmanWord({ guessedLetters, word, lose }: HangmanWordProps) {
   return (
     <div className="wordRack">
       {word.split("").map((letter, i) => {
@@ -14,16 +14,31 @@ export function HangmanWord({ guessedLetters, word}: HangmanWordProps) {
             style={{
               borderBottom: "5px solid black",
               margin: "0px 10px",
-              maxHeight: "45px"
+              maxHeight: "45px",
             }}
           >
-            <div
-              style={{
-                visibility: guessedLetters.includes(letter) ? "visible" : "hidden",
-              }}
-            >
-              {letter}
-            </div>
+            {lose === true ? (
+              <div
+                style={{
+                  visibility: "visible",
+                    color: guessedLetters.includes(letter)
+                    ? "black"
+                    : "red",
+                }}
+              >
+                {letter}
+              </div>
+            ) : (
+              <div
+                style={{
+                  visibility: guessedLetters.includes(letter)
+                    ? "visible"
+                    : "hidden",
+                }}
+              >
+                {letter}
+              </div>
+            )}
           </div>
         );
       })}

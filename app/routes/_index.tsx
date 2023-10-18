@@ -89,7 +89,7 @@ export default function App() {
       </div>
       <div className="manAndWordArea">
         <HangmanArt numOfGuess={incorrectLetters.length} />
-        <HangmanWord guessedLetters={guessedLetters} word={word} />
+        <HangmanWord guessedLetters={guessedLetters} word={word} lose={lose}/>
       </div>
 
       <TileRack
